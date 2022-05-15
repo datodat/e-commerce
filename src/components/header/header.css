@@ -1,0 +1,107 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0px 50px;
+  background-color: #333;
+
+  z-index: 20;
+}
+
+header > div {
+  font-size: 22px;
+  font-family: 'Rowdies';
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: #eee;
+}
+
+header > nav {
+  display: flex;
+}
+
+header > nav > a {
+  font-size: 16px;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  text-transform: capitalize;
+  
+  text-decoration: none;
+  color: #eee;
+  padding: 14px 18px;
+  transition: all 0.3s;
+}
+header > nav > a:hover {
+  background-color: #555;
+}
+
+.resp-nav,
+.resp-nav-clicked {
+  display: none;
+
+  position: absolute;
+  top: 0px;
+  right: 10px;
+
+  cursor: pointer;
+}
+
+.menu1, .menu2, .menu3 {
+  width: 30px;
+  height: 2px;
+  background-color: #eee;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.resp-nav-clicked .menu1 {
+  -webkit-transform: rotate(-45deg) translate(-8px, 4px) ;
+  transform: rotate(-45deg) translate(-8px, 5px) ;
+}
+
+.resp-nav-clicked .menu2 {
+  opacity: 0;
+}
+
+.resp-nav-clicked .menu3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -4px) ;
+  transform: rotate(45deg) translate(-8px, -4px) ;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header > nav {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .resp-nav,
+  .resp-nav-clicked {
+    display: inline-block;
+  }
+
+  header {
+    padding: 0px;
+  }
+  header > div {
+    padding: 10px 10px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  header > nav {
+    display: flex !important;
+  }
+}
