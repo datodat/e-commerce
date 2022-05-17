@@ -1,0 +1,120 @@
+.footer {
+  width: 100%;
+  margin-bottom: 0px !important;
+
+  background-color: #333;
+  padding: 0 50px;
+}
+
+.footer-top {
+  display: flex;
+  padding: 30px 0;
+}
+.int-links-div {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.int-links-div a {
+  font-size: 22px;
+  color: #ccc;
+  text-decoration: none;
+  margin: 10px;
+}
+.ext-links-div {
+  flex: 1;
+  border-right: 1px solid #ccc;
+  padding-left: 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.ext-links-div a {
+  font-size: 22px;
+  color: #ccc;
+  text-decoration: none;
+  margin: 10px;
+  transition: 0.3s;
+}
+.ext-links-div a:hover {
+  letter-spacing: 3px;
+  color: #f30100;
+}
+.ext-links-div a i {
+  margin-right: 8px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ccc;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  color: #ccc;
+  font-size: 12px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1000px) {
+  .ext-links-div {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer {
+    padding: 0px 30px;
+  }
+  .footer-top {
+    padding: 20px 0px;
+  }
+  .ext-links-div {
+    padding-left: 5px;
+  }
+  .ext-links-div a,
+  .int-links-div a {
+    font-size: 16px;
+    margin: 5px;
+  }
+  .footer-bottom {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer-top {
+    flex-direction: column;
+  }
+  .ext-links-div {
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    border-right: none;
+  }
+  .int-links-div {
+    padding-top: 20px;
+    text-align: center;
+  }
+  .footer-bottom {
+    font-size: 8px;
+    padding: 10px 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer {
+    padding: 0 10px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-bottom p {
+    margin: 3px;
+  }
+}

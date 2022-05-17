@@ -20,7 +20,7 @@ header > div {
   font-weight: 700;
   text-transform: uppercase;
 
-  color: #eee;
+  color: #dd8f16;
 }
 
 header > nav {
@@ -30,8 +30,8 @@ header > nav {
 header > nav > a {
   font-size: 16px;
   font-family: 'Montserrat';
-  font-weight: 400;
-  text-transform: capitalize;
+  font-weight: 700;
+  text-transform: uppercase;
   
   text-decoration: none;
   color: #eee;
@@ -39,15 +39,41 @@ header > nav > a {
   transition: all 0.3s;
 }
 header > nav > a:hover {
-  background-color: #555;
+  background-color: #ddd;
+  color: #333;
+}
+.sign-in-link {
+  color: #f30100;
+}
+.sign-in-link:hover {
+  color: #f30100 !important;
+}
+.profile-link {
+  color: #2145f4;
+}
+.profile-link:hover {
+  color: #2145f4 !important;
+}
+.log-out-link {
+  color: #f30100;
+}
+.log-out-link:hover {
+  color: #f30100 !important;
+}
+
+.sign-in-link i,
+.profile-link i,
+.log-out-link i {
+  margin-left: 5px;
 }
 
 .resp-nav,
 .resp-nav-clicked {
   display: none;
+  padding: 0 !important;
 
   position: absolute;
-  top: 0px;
+  top: 5px;
   right: 10px;
 
   cursor: pointer;
@@ -62,8 +88,8 @@ header > nav > a:hover {
 }
 
 .resp-nav-clicked .menu1 {
-  -webkit-transform: rotate(-45deg) translate(-8px, 4px) ;
-  transform: rotate(-45deg) translate(-8px, 5px) ;
+  -webkit-transform: rotate(-45deg) translate(-4px, 7px);
+  transform: rotate(-45deg) translate(-4px, 7px);
 }
 
 .resp-nav-clicked .menu2 {
@@ -71,8 +97,21 @@ header > nav > a:hover {
 }
 
 .resp-nav-clicked .menu3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -4px) ;
-  transform: rotate(45deg) translate(-8px, -4px) ;
+  -webkit-transform: rotate(45deg) translate(-4px, -8px);
+  transform: rotate(45deg) translate(-4px, -8px);
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    padding: 0px 20px;
+  }
+  header > div {
+    font-size: 16px;
+  }
+  header > nav > a {
+    font-size: 14px;
+    padding: 14px 10px;
+  }
 }
 
 @media screen and (max-width: 600px) {
