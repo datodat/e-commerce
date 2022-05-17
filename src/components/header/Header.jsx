@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // Css
 import './header.css';
 
-const Header = ({ user }) => {
+const Header = ({ user, logOut }) => {
   const [navVisible, setNavVisible] = useState(false);
 
   window.addEventListener('resize', () => {
@@ -11,6 +11,11 @@ const Header = ({ user }) => {
       setNavVisible(false);
     }
   })
+
+  const logOutHandler = () => {
+    setNavVisible(false);
+    logOut();
+  }
 
   return (
     <header>
@@ -34,9 +39,9 @@ const Header = ({ user }) => {
             <i className="fa-solid fa-user"></i>  
           </Link>}
         {user && 
-          <Link className='log-out-link' onClick={() => setNavVisible(false)} to='/'>
+          <Link className='log-out-link' onClick={logOutHandler} to='/'>
             log out
-            <i class="fa-solid fa-right-from-bracket"></i>
+            <i className="fa-solid fa-right-from-bracket"></i>
           </Link>}
       </nav>
       {/* Responsive nav menu */}

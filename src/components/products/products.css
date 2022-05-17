@@ -18,22 +18,56 @@
   border-radius: 6px;
   background-color: #FFF;
   outline: none;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 
   font-size: 18px;
   font-family: 'Montserrat';
   padding: 14px;
   text-align: center;
+  transition: 0.3s;
+}
+.search-div input:focus {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
 }
 
 .products-div {
+  position: relative;
   padding: 30px 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 20px;
 }
+/* .products-cart {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -270px;
+  margin: 0;
+  padding: 0;
+
+  width: 300px;
+  height: 70%;
+  border-radius: 6px;
+  background-color: yellow;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.products-cart:hover {
+  right: 0;
+}
+.products-cart p {
+  font-size: 22px;
+  font-family: 'Rowdies';
+  font-weight: 700;
+  color: #313131;
+  letter-spacing: 4px;
+  transform: rotate(-90deg);
+} */
 
 @media screen and (max-width: 600px) {
   .search-div input {

@@ -32,6 +32,9 @@ const Products = ({ phones }) => {
       </div>
       <hr />
       <div className='products-div'>
+        {/* <div className='products-cart'>
+          <p>cart</p>
+        </div> */}
         {phonesArray.length > 0 && phonesArray.map(i => {
           return <Card key={i.id} phone={i} />
         })}

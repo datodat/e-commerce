@@ -35,7 +35,7 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <p>Created By Dato Kevlishvili</p>
-        <p>&copy; Copyright 2022, All rights reserved</p>
+        <p>Copyright &copy;2022 All rights reserved</p>
       </div>
     </div>
   );

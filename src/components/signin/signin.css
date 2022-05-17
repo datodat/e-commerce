@@ -1,4 +1,149 @@
 .sign-in {
-  width: 100%;
   min-height: 100vh;
+  padding: 47.2px 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-in form {
+  padding: 20px;
+  border-radius: 6px;
+  background-color: #CCC;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.success-notification,
+.error-notification {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  word-wrap: break-word !important;
+  font-family: 'Montserrat' !important;
+  text-transform: none !important;
+  color: #119b08 !important;
+}
+.error-notification {
+  color: #f30100 !important;
+}
+
+.sign-in form > p {
+  font-size: 22px;
+  font-family: 'Rowdies';
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 10px;
+  color: #313131;
+}
+.sign-in form div {
+  width: 400px;
+  margin-top: 20px;
+  position: relative;
+}
+.sign-in form div input {
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px 10px 30px;
+  outline: none;
+  border: 1px solid;
+  border-radius: 6px;
+  font-size: 18px;
+}
+.sign-in form div i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+
+  color: #f30100;
+}
+.sign-in form div p {
+  position: absolute;
+  bottom: -15px;
+  left: 30px;
+  font-size: 12px;
+  font-family: 'Montserrat';
+  font-style: italic;
+  color: #f30100;
+}
+
+.submit-btn {
+  margin-top: 40px;
+  width: 400px;
+
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-family: 'Rowdies';
+  font-weight: 700;
+  padding: 14px;
+  color: #FFF;
+  background-color: #119b08;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #0e5409;
+  transition: ease-out 0.3s;
+}
+.submit-btn:hover {
+  box-shadow: inset 400px 0 0 0 #0e5409;
+}
+
+.change-form-btn {
+  margin-top: 10px;
+  width: 400px;
+
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-family: 'Rowdies';
+  font-weight: 700;
+  padding: 14px;
+  color: #FFF;
+  background-color: #4947c6;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #16146e;
+  transition: ease-out 0.3s;
+}
+.change-form-btn:hover {
+  box-shadow: inset 400px 0 0 0 #16146e;
+}
+
+@media screen and (max-width: 600px) {
+  .sign-in {
+    padding: 47.2px 10px;
+  }
+  .sign-in form {
+    width: 95%;
+    padding: 10px;
+  }
+  .sign-in form div {
+    width: 100%;
+  }
+  .sign-in form button {
+    width: 100%;
+  }
+  .sign-in form button:hover {
+    box-shadow: none !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .sign-in form div input {
+    padding: 8px;
+    padding-left: 14px;
+    font-size: 12px;
+  }
+  .sign-in form div p {
+    font-size: 8px;
+    bottom: -12px;
+    left: 14px;
+  }
+  .sign-in form button {
+    padding: 10px;
+    font-size: 14px;
+  }
 }
