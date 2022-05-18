@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './card.css';
 
-const Card = ({ phone }) => {
+const Card = ({ phone, handleCart }) => {
   const [showUsd, setShowUsd] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
 
@@ -38,7 +38,10 @@ const Card = ({ phone }) => {
           {showInfo ? 'Hide' : 'Info'}
           <i className="fa-solid fa-circle-info"></i>
         </button>
-        <button className='add-cart-btn'>
+        <button 
+          className='add-cart-btn'
+          onClick={() => handleCart(phone)}
+        >
           Add to cart
           <i className="fa-solid fa-cart-shopping"></i>
         </button>

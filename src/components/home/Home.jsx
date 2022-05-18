@@ -1,9 +1,12 @@
-import React from 'react';
 import './home.css';
+// Slider
+import Slider from '../slider/Slider';
 
-const Home = () => {
+const Home = ({ phones }) => {
   return (
-    <div className='home'>Home</div>
+    <div className='home'>
+      <Slider />
+    </div>
   );
 }
 

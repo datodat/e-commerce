@@ -100,8 +100,8 @@ const App = () => {
             /> : 
             <Navigate replace to='/' />} />
           <Route path='/profile' element={user ? <Profile /> : <Navigate replace to='/sign-in' />} />
-          <Route path='/products' element={<Products phones={phones} />} />
-          <Route path='/' element={<Home />} />
+          <Route path='/products' element={<Products phones={phones} user={user} />} />
+          <Route path='/' element={<Home phones={phones} />} />
         </Routes>
 
         <Footer />
