@@ -20,7 +20,7 @@ const Header = ({ user, logOut }) => {
   return (
     <header>
       <div>
-        online shop
+        smartphones
       </div>
       {/* Navbar */}
       <nav

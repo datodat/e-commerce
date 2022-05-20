@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+// Css
 import './products.css';
+// Card
 import Card from '../card/Card';
 
-const Products = ({ user, phones }) => {
+const Products = ({ phones }) => {
   const [word, setWord] = useState('');
   const [phonesArray, setPhonesArray] = useState([]);
 
@@ -32,12 +34,14 @@ const Products = ({ user, phones }) => {
     }
   }
 
+  // Full Price calculator
   const fullPrice = () => {
     let price = 0;
     cart.forEach(i => price += i.price);
     return price;
   }
 
+  // Remove phone
   const removePhone = id => {
     const filtered = cart.filter(i => i.id !== id);
     setCart(filtered);
@@ -50,7 +54,7 @@ const Products = ({ user, phones }) => {
         <i id='cart-logo' className="fa-solid fa-cart-shopping"></i>
         <p>Cart</p>
         <div className='cart-list-container'>
-          {cart.length > 0 && cart.map(i => {
+          {cart.length > 0 ? cart.map(i => {
             return (
               <div className='cart-list' key={i.id}>
                 <p>{i.name}</p>
@@ -59,8 +63,10 @@ const Products = ({ user, phones }) => {
                   <i onClick={() => removePhone(i.id)} className="fa-solid fa-trash"></i>
                 </div>
               </div>
-            );
-          })}
+            )
+          }) :
+            <p className='no-items-p'>No Items</p>
+          }
         </div>
         <p>Price: <span>{cart.length > 0 ? fullPrice() : 0}</span> ₾</p>
       </div>

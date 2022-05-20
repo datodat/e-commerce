@@ -1,5 +1,7 @@
 import { useState, forwardRef, useImperativeHandle } from 'react';
+// Css
 import './signin.css';
+// Validators
 import { usernameValidator, nameValidator, passwordValidator } from './validators';
 
 const Signin = forwardRef (({ loginHandler, signupHandler }, ref) => {
@@ -147,7 +149,7 @@ const Signin = forwardRef (({ loginHandler, signupHandler }, ref) => {
           type='submit'
           onClick={handleLogin}
         >
-          log in
+          Log in
         </button>
         <button
           key={2}
@@ -155,7 +157,7 @@ const Signin = forwardRef (({ loginHandler, signupHandler }, ref) => {
           className='change-form-btn'
           onClick={changeForm}
         >
-          don't have account? sign up
+          Don't have account? sign up
         </button>
       </form>
     );
@@ -211,7 +213,7 @@ const Signin = forwardRef (({ loginHandler, signupHandler }, ref) => {
           type='submit'
           onClick={handleSignup}
         >
-          log in
+          Sign Up
         </button>
         <button 
           key={2}
@@ -219,7 +221,7 @@ const Signin = forwardRef (({ loginHandler, signupHandler }, ref) => {
           className='change-form-btn'
           onClick={changeForm}
         >
-          already member? log in
+          Already member? log in
         </button>
       </form>
     );

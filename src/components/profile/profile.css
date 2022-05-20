@@ -1,4 +1,203 @@
 .profile {
   width: 100%;
   min-height: 100vh;
+
+  padding: 47.2px 50px;
+}
+
+.form-div {
+  width: 100%;
+}
+
+.form-div form {
+  margin: 20px auto;
+  width: 550px;
+  padding: 20px;
+  border-radius: 6px;
+
+  background-color: #d3d3d3;
+}
+
+.form-div form input {
+  width: 100%;
+  padding: 16px 16px 16px 26px;
+  border: 1px solid #919191;
+  outline: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: 'Montserrat';
+
+  margin-top: 15px;
+}
+
+.form-div form button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: 'Rowdies';
+  text-transform: uppercase;
+  background-color: #444444;
+  color: #f2f2f2;
+  box-shadow: 0px 6px 0px 0px #888888;
+
+  margin-top: 20px;
+  cursor: pointer;
+}
+.form-div form button:active {
+  box-shadow: 0px 3px 0px 0px #666666;
+  transform: translateY(3px);
+  background-color: #333333;
+}
+
+.form-div form p {
+  text-align: center;
+  font-size: 22px;
+  font-family: 'Rowdies';
+  text-transform: uppercase;
+}
+
+.error-p {
+  text-align: center;
+  word-wrap: break-word;
+  font-size: 15px !important;
+  color: rgb(157, 22, 22) !important;
+  font-family: 'Montserrat' !important;
+  padding: 20px 0;
+}
+
+.all-users-div,
+.all-phones-div {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.all-users-div > p,
+.all-phones-div > p {
+  font-size: 22px;
+  font-family: 'Rowdies';
+  text-align: center;
+  padding: 20px;
+}
+
+.all-users-list,
+.all-phones-list {
+  width: 100%;
+  background-color: #a6a6a6;
+  border-radius: 4px;
+  padding: 10px;
+
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.all-users-list > p,
+.all-phones-list > p {
+  font-size: 18px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+}
+.all-users-list div button,
+.all-phones-list div button {
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  color: #eee;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  cursor: pointer;
+}
+.all-users-list div button:nth-child(1),
+.all-phones-list div button:nth-child(1) {
+  margin-right: 5px;
+  background-color: #fd2104;
+}
+.all-users-list div button:nth-child(2),
+.all-phones-list div button:nth-child(2) {
+  background-color: rgb(38, 38, 134);
+}
+
+.phone-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.edit-div {
+  width: 100%;
+  border: 1px solid #515151;
+  border-top: none !important;
+
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+.edit-div form {
+  width: 100%;
+}
+.edit-div input {
+  outline: none;
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #919191;
+  border-radius: 4px;
+  text-align: center;
+}
+.edit-div button {
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Rowdies';
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #626262;
+  color: #FFF;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+.edit-div button:hover {
+  background-color: #323232;
+}
+
+@media screen and (max-width: 700px) {
+  .profile {
+    padding: 47.2px 20px;
+  }
+  .form-div form {
+    width: 100%;
+  }
+
+  .all-users-list,
+  .all-phones-list {
+    flex-direction: column;
+  }
+  .all-phones-list > div,
+  .all-users-list > div {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .form-div form input {
+    padding: 10px;
+  }
+  .form-div form button {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .all-phones-list > p,
+  .all-users-list > p {
+    font-size: 14px;
+  }
 }

@@ -1,5 +1,7 @@
 import { useState } from 'react';
+// Css
 import './slider.css';
+// Images array
 const sliderPhotos = [
   './slider/slider1.jpg',
   './slider/slider2.jpg',

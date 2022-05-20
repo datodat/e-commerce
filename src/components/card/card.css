@@ -19,6 +19,7 @@
 
 .info-div {
   height: 371px;
+  padding: 5px;
   
   border-radius: 6px;
   background-color: #eee;
@@ -31,6 +32,8 @@
   font-size: 18px;
   font-weight: 700;
   color: #313131;
+  word-wrap: break-word;
+  text-align: center;
 }
 
 .card-info {
